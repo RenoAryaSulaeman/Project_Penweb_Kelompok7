@@ -11,6 +11,8 @@ const RecipeDetail = () => {
   const [rating, setRating] = useState(0);
   const buttons = [1, 2, 3, 4, 5];
 
+  const score = (dataDetail.spoonacularScore ?? 0).toFixed(2);
+
   useEffect(() => {
     if (id) {
       detail(id);
@@ -23,10 +25,11 @@ const RecipeDetail = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="max-w-xl border border-orange-300 px-4">
+      <div className="max-w-xl border border-orange-300 px-4 py-12">
         <button onClick={onClick} className="my-2 bg-orange-300 p-2 rounded font-semibold text-white cursor-pointer">Back</button>
         <div className="my-4">
           <h1 className="text-4xl font-semibold mb-4">{dataDetail.title}</h1>
+          <h2 className="text-xl mb-4"><span className="text-2xl text-orange-300 font-bold">{score}%</span> people like it!</h2>
           <img src={dataDetail.image} alt={dataDetail.title} />
         </div>
         {dataDetail.extendedIngredients && (

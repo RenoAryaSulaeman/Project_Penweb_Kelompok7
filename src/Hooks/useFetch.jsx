@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 
 const API = "https://api.spoonacular.com/recipes"
-const API_KEY = import.meta.env.VITE_API_URL;
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 const useFetch = () => {
     const [data, setData] = useState([]);

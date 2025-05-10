@@ -1,9 +1,9 @@
 import React from "react";
 
-const Home = () => {
+const Home = ({judul}) => {
     return (
         <div className="p-4">
-            <h1 className="text-3xl font-bold mb-4">Welcome to FoodHub!</h1>
+            <h1 className="text-3xl font-bold mb-4">{judul}</h1>
             <p className="mb-2">
                 Explore a world of delicious and easy-to-make recipes right at your fingertips.
                 Whether you're looking for traditional comfort food or something new to try, we've got something for everyone.

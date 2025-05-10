@@ -19,7 +19,7 @@ function App() {
         <Route path="/" element={<RecipeList />} />
         <Route path="/" element={<Search />} />
         <Route path="/detail/:id" element={<RecipeDetail />} />
-        <Route path="/Home" element={<Home />}/>
+        <Route path="/Home" element={<Home judul="Welcome to FoodHub!"/>}/>
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />

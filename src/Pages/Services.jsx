@@ -1,25 +1,54 @@
 import React from "react";
+import { Container, Row, Col, Card } from "react-bootstrap";
+import { motion } from "framer-motion";
+
+const services = [
+  {
+    icon: "📚",
+    title: "Recipe Collections",
+    description: "Temukan berbagai resep — dari masakan tradisional Indonesia hingga hidangan internasional favorit.",
+  },
+  {
+    icon: "🔍",
+    title: "Search & Filter",
+    description: "Cari resep berdasarkan kategori seperti vegetarian, Italia, atau bahan yang kamu punya.",
+  },
+  {
+    icon: "❤️",
+    title: "Favorite & Save",
+    description: "Tandai resep favoritmu dan simpan untuk dicoba nanti.",
+  },
+  {
+    icon: "🥦",
+    title: "Ingredient-Based Suggestions",
+    description: "Masukkan bahan yang ada di rumah, dan kami kasih ide masakan yang bisa kamu buat!",
+  },
+];
 
 const Services = () => {
-    return (
-        <div className="p-4">
-            <h1 className="text-2xl font-bold mb-4">Our Services</h1>
-            <ul className="list-disc pl-5 space-y-2">
-                <li>
-                    <strong>Recipe Collections:</strong> Discover a wide range of recipes, from traditional Indonesian dishes to international favorites.
-                </li>
-                <li>
-                    <strong>Search and Filter:</strong> Easily find recipes by category such as vegetarian, italian, or based on ingredients.
-                </li>
-                <li>
-                    <strong>Favorite and Save:</strong> Mark recipes as your favorite and save them for later use. 
-                </li>
-                <li>
-                    <strong>Ingredient-Based Suggestions:</strong> Enter the ingredients you have and get suggestions on what you can cook. 
-                </li>
-            </ul>
-        </div>
-    );
+  return (
+    <Container className="py-5">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h1 className="text-primary display-6 fw-bold mb-5 text-center">✨ Layanan Kami</h1>
+        <Row>
+          {services.map((service, index) => (
+            <Col key={index} md={6} lg={6} className="mb-4">
+              <Card className="h-100 shadow-sm border-0">
+                <Card.Body>
+                  <h4 className="fw-bold mb-2">{service.icon} {service.title}</h4>
+                  <p className="text-muted">{service.description}</p>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </motion.div>
+    </Container>
+  );
 };
 
 export default Services;

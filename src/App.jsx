@@ -8,6 +8,7 @@ import Services from "./Pages/Services"
 import Contact from "./Pages/Contact"
 import Home from "./Pages/Home"
 
+
 function App() {
   return (
     <>
@@ -17,7 +18,7 @@ function App() {
       </div>
       <Routes>
         <Route path="/" element={<RecipeList />} />
-        <Route path="/" element={<Search />} />
+        <Route path="/search" element={<Search />} />
         <Route path="/detail/:id" element={<RecipeDetail />} />
         <Route path="/Home" element={<Home judul="Welcome to FoodHub!"/>}/>
         <Route path="/about" element={<About />} />

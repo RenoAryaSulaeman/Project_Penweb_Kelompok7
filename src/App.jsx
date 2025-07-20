@@ -7,7 +7,7 @@ import About from "./Pages/About"
 import Services from "./Pages/Services"
 import Contact from "./Pages/Contact"
 import Home from "./Pages/Home"
-
+// import RecipeApp from "./Hooks/ResipeApp"
 
 function App() {
   return (
@@ -34,6 +34,7 @@ function App() {
           <Link to={"/contact"} className="hover:text-orange-300">Contact</Link>
         </ul>
       </div>
+      {/* <RecipeApp /> */}
     </Router>
     </>
   )
